@@ -36,6 +36,30 @@ public class MainActivity extends AppCompatActivity {
                 checkInputVals(checkVal, partVal);
             }
         });
+
+        checkAmountValue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fifteenPercentTipValue.setText("______");
+                twentyPercentTipValue.setText("______");
+                twentyfivePercentTipValue.setText("______");
+                fifteenPercentTotalValue.setText("______");
+                twentyPercentTotalValue.setText("______");
+                twentyfivePercentTotalValue.setText("______");
+            }
+        });
+
+        partySizeValue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fifteenPercentTipValue.setText("______");
+                twentyPercentTipValue.setText("______");
+                twentyfivePercentTipValue.setText("______");
+                fifteenPercentTotalValue.setText("______");
+                twentyPercentTotalValue.setText("______");
+                twentyfivePercentTotalValue.setText("______");
+            }
+        });
     }
 
     public void checkInputVals(String checkAmountValue, String partySizeValue){
@@ -67,27 +91,25 @@ public class MainActivity extends AppCompatActivity {
 
     public void calculateVals(int checkVal, int partyVal)
     {
-         int perPersonAmount = checkVal/partyVal;
+         double perPersonAmount = checkVal/partyVal;
 
-         int tip15 = (int) (perPersonAmount*.15);
+         double tip15 = Math.round(perPersonAmount*.15);
 
-         System.out.println(tip15+"tip15");
+         double tip20 = Math.round(perPersonAmount*.20);
 
-         int tip20 = (int) (perPersonAmount*.20);
+         double tip25 = Math.round(perPersonAmount*.25);
 
-         int tip25 = (int) (perPersonAmount*.25);
+         double total15 = tip15 + perPersonAmount;
 
-         int total15 = (int) (perPersonAmount*.15) + perPersonAmount;
+         double total20 = tip20 + perPersonAmount;
 
-         int total20 = (int) (perPersonAmount*.20) + perPersonAmount;
+         double total25 = tip25 + perPersonAmount;
 
-         int total25 = (int) (perPersonAmount*.25) + perPersonAmount;
-
-        fifteenPercentTipValue.setText(String.valueOf(tip15));
-        twentyPercentTipValue.setText(String.valueOf(tip20));
-        twentyfivePercentTipValue.setText(String.valueOf(tip25));
-        fifteenPercentTotalValue.setText(String.valueOf(total15));
-        twentyPercentTotalValue.setText(String.valueOf(total20));
-        twentyfivePercentTotalValue.setText(String.valueOf(total25));
+        fifteenPercentTipValue.setText(String.valueOf((int) tip15));
+        twentyPercentTipValue.setText(String.valueOf((int) tip20));
+        twentyfivePercentTipValue.setText(String.valueOf((int) tip25));
+        fifteenPercentTotalValue.setText(String.valueOf((int) total15));
+        twentyPercentTotalValue.setText(String.valueOf((int) total20));
+        twentyfivePercentTotalValue.setText(String.valueOf((int) total25));
     }
 }
