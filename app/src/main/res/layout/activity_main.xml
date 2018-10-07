@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/checkAmount">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Check Amount:"
+            android:layout_weight=".5"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/checkAmountValue"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_below="@id/checkAmount"
+        android:id="@+id/partySize">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Party Size:"
+            android:layout_weight=".5"/>
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/partySizeValue"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="COMPUTE TIP"
+        android:layout_below="@id/partySize"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:id="@+id/buttonCompute"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/buttonCompute"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/tip">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tip:"
+            android:layout_weight=".20"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifteenPercentTipValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyPercentTipValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyfivePercentTipValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tip"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/total">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total:"
+            android:layout_weight=".20"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="15%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/fifteenPercentTotalValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="20%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyPercentTotalValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="25%"
+            android:layout_weight=".20"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/twentyfivePercentTotalValue"
+            android:layout_weight=".25"
+            android:text="_______"
+            android:maxLines="1"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
